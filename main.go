@@ -79,15 +79,8 @@ func maxChunks(data []int) int {
 	}
 
 	wg.Wait()
-	overallMax := maxValues[0]
 
-	for _, v := range maxValues {
-		if v > overallMax {
-			overallMax = v
-		}
-	}
-
-	return overallMax
+	return maximum(maxValues)
 }
 
 func main() {
